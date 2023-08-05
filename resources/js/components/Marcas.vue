@@ -267,6 +267,8 @@ export default {
                     </template>
 
                     <template v-slot:rodape>
+                        {{ console.log(marcas.links) }}
+
                         <Paginate>
                             <li
                                 v-for="(l, key) in marcas.links"
@@ -276,9 +278,24 @@ export default {
                                 "
                                 @click="paginacao(l)"
                             >
-                                <a class="page-link" v-html="l.label"></a>
+                                <a
+                                    class="page-link"
+                                    v-if="l.label.match(/Previous/) !== null"
+                                    v-html="'Anterior'"
+                                ></a>
+                                <a
+                                    class="page-link"
+                                    v-else-if="l.label.match(/Next/) !== null"
+                                    v-html="'Próximo'"
+                                ></a>
+                                <a
+                                    class="page-link"
+                                    v-else
+                                    v-html="l.label"
+                                ></a>
                             </li>
                         </Paginate>
+
                         <div class="ms-auto">
                             <button
                                 type="button"

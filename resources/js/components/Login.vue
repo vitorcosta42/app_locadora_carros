@@ -34,7 +34,7 @@ export default {
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header bg-primary text-white">Login (Vue)</div>
+                    <div class="card-header bg-primary text-white">Login</div>
                     <div class="card-body">
                         <form
                             method="POST"
@@ -113,7 +113,7 @@ export default {
                                         type="submit"
                                         class="btn btn-primary"
                                     >
-                                        Login
+                                       Entrar
                                     </button>
 
                                     <a class="btn btn-link" href="#">

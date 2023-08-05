@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             urlBase: "http://localhost:8000/api/v1/cliente",
-            urlPaginacao:"",
+            urlPaginacao: "",
             urlFiltro: "",
             nomeCliente: "",
             arquivoImagem: [],
@@ -247,10 +247,23 @@ export default {
                                 "
                                 @click="paginacao(l)"
                             >
-                                <a class="page-link" v-html="l.label"></a>
+                                <a
+                                    class="page-link"
+                                    v-if="l.label.match(/Previous/) !== null"
+                                    v-html="'Anterior'"
+                                ></a>
+                                <a
+                                    class="page-link"
+                                    v-else-if="l.label.match(/Next/) !== null"
+                                    v-html="'Próximo'"
+                                ></a>
+                                <a
+                                    class="page-link"
+                                    v-else
+                                    v-html="l.label"
+                                ></a>
                             </li>
                         </Paginate>
-
                         <div class="ms-auto">
                             <button
                                 type="button"

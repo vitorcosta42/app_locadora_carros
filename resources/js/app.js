@@ -1,7 +1,6 @@
 import "./bootstrap";
 import { createApp } from "vue";
 import { createStore } from "vuex";
-
 const store = createStore({
     state() {
         return {
@@ -17,7 +16,6 @@ const store = createStore({
 
 const app = createApp({});
 app.use(store);
-
 import LoginComponent from "./components/Login.vue";
 import HomeComponent from "./components/Home.vue";
 import ClientesComponent from "./components/Clientes.vue";
