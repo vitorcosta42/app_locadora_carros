@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Bootstrap-blue"/>
     <img src="https://img.shields.io/badge/MySQL-blue"/>
 </div>
-<img width="500" src= "./public/home.png" />
+<img width="1000" src= "./public/print.png" />
 
 <h2>Descrição</h2>
 <p>
@@ -46,14 +46,25 @@
      php artisan serve
   </code>
 </pre>
+<h5> **É importante se lembrar de configurar o seu banco de dados local no arquivo .env antes das migrações** </h5> 
 <h3>4. Faça as migrações</h3>
 <pre>
   <code>
    php artisan migrate     
   </code>
 </pre>
-<h4> **É importante se lembrar de configurar o seu banco de dados local no arquivo .env antes das migrações** </h4> 
-
+<h3>5. Faça a conexão das storages</h3>
+<pre>
+  <code>
+   php artisan storage:link
+  </code>
+</pre>
+<h3>6. Crie um token JWT para a autenticação</h3>
+<pre>
+  <code>
+   php artisan jwt:secret
+  </code>
+</pre>
 <h6>Após realizar esta sequência de passos a aplicação já estará pronta para ser utilizada! </h6>
 
 <h2>Créditos</h2>
